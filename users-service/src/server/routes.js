@@ -38,24 +38,47 @@ const setupRoutes = app => {
     }
   });
 
+  app.get("/sessions/:sessionId", async (req, res, next) => {
+    try {
+      const userSession = await UserSession.findByPk(req.params.sessionId);
 
-    app.post("/users", async (req, res, next) => {
-        if (!req.body.email || !req.body.password) {
-            return next(new Error("Invalid body!"));
-        }
+      if (!userSession) return next(new Error("Invalid session ID"));
 
-        try {
-            const newUser = await User.create({
-                email: req.body.email,
-                id: generateUUID(),
-                passwordHash: hashPassword(req.body.password)
-            });
+      return res.json(userSession);
+    } catch (e) {
+      return next(e);
+    }
+  });
 
-            return res.json(newUser);
-        } catch (e) {
-            return next(e);
-        }
-    });
+  app.post("/users", async (req, res, next) => {
+      if (!req.body.email || !req.body.password) {
+          return next(new Error("Invalid body!"));
+      }
+
+      try {
+          const newUser = await User.create({
+              email: req.body.email,
+              id: generateUUID(),
+              passwordHash: hashPassword(req.body.password)
+          });
+
+          return res.json(newUser);
+      } catch (e) {
+          return next(e);
+      }
+  });
+
+  app.get("/users/:userId", async (req, res, next) => {
+    try {
+      const user = await User.findByPk(req.params.userId);
+
+      if (!user) return next(new Error("Invalid user ID"));
+
+      return res.json(user);
+    } catch (e) {
+      return next(e);
+    }
+  });
 }
 
 export default setupRoutes;
