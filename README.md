@@ -11,3 +11,13 @@ React/Node.js Microservices using Docker and GraphQL.
 - [GraphQL](https://graphql.org/) -  Data query and manipulation language for APIs.
 - [Sequelize](https://sequelize.org/) - A Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
 - [Redux](https://redux.js.org/) - A JavaScript library for managing application state.
+
+## Setup 🐱‍🏍
+In the main directory run:
+```
+docker-compose up
+```
+In another terminal go to /classifieds-app to install the dependencies with ```yarn install``` and then run:
+```
+yarn watch
+```
