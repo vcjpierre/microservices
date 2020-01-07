@@ -12,7 +12,7 @@ React/Node.js Microservices using Docker and GraphQL.
 - [Sequelize](https://sequelize.org/) - A Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
 - [Redux](https://redux.js.org/) - A JavaScript library for managing application state.
 
-## Setup 🐱‍🏍
+## 🐱‍🏍 Setup
 In the main directory run:
 ```
 docker-compose up
