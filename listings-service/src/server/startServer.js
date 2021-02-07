@@ -10,6 +10,10 @@ const PORT = accessEnv("PORT", 7100);
 
 const app = express();
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 app.use(bodyParser.json());
 
 app.use(
