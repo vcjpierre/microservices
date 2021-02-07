@@ -17,6 +17,16 @@ In the main directory run:
 ```
 docker-compose up
 ```
+
+Run migrations:
+```
+docker-compose exec listings-service bash
+yarn db migrate
+
+docker-compose exec users-service bash
+yarn db migrate
+```
+
 In another terminal go to /classifieds-app to install the dependencies with ```yarn install``` and then run:
 ```
 yarn watch
