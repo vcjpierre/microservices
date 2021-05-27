@@ -9,7 +9,7 @@
     "watch": "babel-watch -L src/index.js"
   },
   "devDependencies": {
-    "babel-watch": "^7.0.0",
+    "babel-watch": "^7.4.1",
     "nodemon": "^2.0.2"
   },
   "dependencies": {
