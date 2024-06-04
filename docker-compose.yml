@@ -25,7 +25,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=db
-    image: mysql:5.7.20
+    image: mysql:lts
     ports:
       - 0.0.0.0:7200:3306
 
@@ -44,6 +44,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=db
-    image: mysql:5.7.20
+    image: mysql:lts
     ports:
       - 0.0.0.0:7201:3306
