@@ -22,7 +22,7 @@
     "cors": "~2.8.5",
     "date-fns": "~2.8.1",
     "express": "~4.19.2",
-    "mysql2": "~3.9.8",
+    "mysql2": "~3.22.0",
     "sequelize": "~6.37.8",
     "sequelize-cli": "~5.5.1",
     "uuid": "~14.0.0"
