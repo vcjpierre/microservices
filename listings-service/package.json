@@ -19,7 +19,7 @@
     "body-parser": "~2.3.0",
     "cors": "~2.8.5",
     "express": "~4.20.0",
-    "mysql2": "~3.22.0",
+    "mysql2": "~3.23.1",
     "sequelize": "~6.37.8",
     "sequelize-cli": "~5.5.1"
   }
